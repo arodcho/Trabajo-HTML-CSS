@@ -1,0 +1,48 @@
+/* ===== Reset básico ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Estilos generales ===== */
+body {
+    background-color: #ffffff;
+    color: black;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background: #f0f4f8;
+  box-shadow: 0 0.2rem 0.3rem rgba(0,0,0,0.1);
+}
+
+/* Nav */
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li + li {
+  margin-left: 1.25rem;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9375rem;
+  color: #1a73e8;
+  padding: 0.45rem 0.6rem;
+  border-radius: 0.75rem;
+}
+
+nav a:hover,
+nav a.activo {
+  color: #fff;
+  background-color: #1a73e8;
+}
+
