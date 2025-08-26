@@ -13,12 +13,17 @@ body {
 
 /* Header */
 header {
+  position: fixed; /* fijo arriba */
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.75rem;
-  background: #f0f4f8;
-  box-shadow: 0 0.2rem 0.3rem rgba(0,0,0,0.1);
+  padding: 0.75rem 2rem;
+  background: rgba(240, 244, 248, 0.8); /* semi-transparente */
+  backdrop-filter: blur(6px); /* efecto difuminado elegante */
+  z-index: 1000;
 }
 
 /* Nav */
@@ -45,4 +50,33 @@ nav a.activo {
   color: #fff;
   background-color: #1a73e8;
 }
+
+/* ===== Estilos de la portada ===== */
+.portada {
+  position: relative;
+  height: 100vh; /* ocupa toda la pantalla */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white; /* texto visible sobre la imagen */
+}
+
+.portada img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* la imagen cubre toda la sección */
+  z-index: -1; /* queda detrás del texto */
+}
+
+.portada h2,
+.portada p {
+  z-index: 1;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6); /* mejor legibilidad */
+}
+
 
