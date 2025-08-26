@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Presupuestos</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="productos.html">Destinos</a></li>
+          <li><a href="presupuestos.html" class="activo">Presupuestos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="form-presupuesto">
+        <h2>Solicitar presupuesto</h2>
+        <form action="#" method="post">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Nombre" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Email" required />
+
+          <label for="telefono">Teléfono:</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="Telefono" required />
+
+          <label for="info">Observaciones:</label>
+          <textarea
+            id="info"
+            name="info"
+            rows="5"
+            required
+            placeholder="Escribe tu consulta..."
+          ></textarea>
+
+          <label class="checkbox">
+            <input type="checkbox" id="privacidad" name="privacidad" required />
+            Acepto la <a href="#">Política de privacidad</a>
+          </label>
+
+          <button type="submit">Enviar Solicitud</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 Viacor. Todos los derechos reservados.</p>
+    </footer>
+  </body>
+</html>
