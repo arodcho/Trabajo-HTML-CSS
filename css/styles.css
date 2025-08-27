@@ -80,3 +80,13 @@ nav a.activo {
 }
 
 
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #f1f1f1;
+  color: #555;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-size: 0.75rem;
+}
