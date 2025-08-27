@@ -1,3 +1,26 @@
+/* ===== Paleta de Colores ===== */
+:root {
+  /* Colores base */
+  --off-white: #f0f4f8; /* Texto sobre fondo oscuro */
+  --picton-blue: #00a6fb; /* Azul eléctrico (brillo principal) */
+  --steel-blue: #0582ca; /* Azul medio (resplandor intermedio) */
+  --lapis-lazuli: #006494; /* Azul profundo (detalle y texto destacado) */
+  --rich-black: #051923; /* Negro azulado (fondos oscuros) */
+
+  /* Gradientes base */
+  --gradient-primary: linear-gradient(
+    135deg,
+    var(--picton-blue),
+    var(--steel-blue)
+  );
+  --gradient-dark: linear-gradient(
+    135deg,
+    var(--lapis-lazuli),
+    var(--steel-blue),
+    var(--rich-black)
+  );
+}
+
 /* ===== Reset básico ===== */
 * {
   margin: 0;
@@ -95,6 +118,7 @@ nav a.activo {
   font-size: 1.3rem;
   text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
   animation: fadeInUp 1.2s ease;
+  color: var(--off-white);
 }
 
 /* Animaciones */
@@ -123,10 +147,10 @@ nav a.activo {
 /* ===== Main ===== */
 main {
   font-family: "Poppins", sans-serif;
-  color: #333;
+  color: var(--rich-black);
   line-height: 1.7;
   font-size: 1rem;
-  margin-top: 70px; /* para compensar header fijo */
+  margin-top: 70px; /* compensa header fijo */
 }
 
 main section {
@@ -142,19 +166,19 @@ main p {
   max-width: 700px;
   margin: 0 auto;
   font-size: 1.1rem;
-  color: #fff;
+  color: var(--rich-black);
 }
 
 /* ===== Servicios ===== */
 #servicios {
-  background: #f9fafb;
+  background: var(--off-white);
   text-align: center;
 }
 
 #servicios h2 {
   font-size: 2.4rem;
   margin-bottom: 2rem;
-  color: #1e3a8a;
+  color: var(--lapis-lazuli);
   position: relative;
 }
 
@@ -163,7 +187,7 @@ main p {
   display: block;
   width: 80px;
   height: 4px;
-  background: #3b82f6;
+  background: var(--steel-blue);
   margin: 1rem auto 0;
   border-radius: 2px;
 }
@@ -189,7 +213,7 @@ main p {
 }
 
 #servicios li::before {
-  content: "✈️"; /* ícono decorativo */
+  content: "✈️";
   font-size: 2rem;
   margin-bottom: 1rem;
 }
@@ -197,28 +221,29 @@ main p {
 #servicios li:hover {
   transform: translateY(-10px) scale(1.02);
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
-  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+  background: var(--gradient-primary);
   color: #fff;
 }
 
 /* ===== Presupuestos ===== */
 #presupuestos {
-  background: #020024;
   background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(9, 9, 121, 1) 35%,
-    rgba(0, 212, 255, 1) 100%
+    180deg,
+    var(--lapis-lazuli) 0%,
+    var(--steel-blue) 25%,
+    var(--picton-blue) 50%,
+    #ffff 100%
   );
   text-align: center;
-  border-radius: 1rem 1rem 0 0;
   padding: 5rem 2rem;
+  margin-bottom: 10rem; /* espacio antes del footer */
+  color: var(--off-white);
 }
+
 
 #presupuestos h2 {
   font-size: 2.6rem;
   margin-bottom: 1rem;
-  color: #ffff;
 }
 
 #presupuestos p {
@@ -226,13 +251,12 @@ main p {
   margin: 0 auto 2.5rem;
   font-size: 1.25rem;
   line-height: 1.8;
-  color: #ffff;
 }
 
 #presupuestos a {
   display: inline-block;
-  background: #1e40af;
-  color: #ffff;
+  background: var(--rich-black);
+  color: #fff;
   padding: 1rem 2rem;
   font-weight: bold;
   border-radius: 50px;
@@ -243,17 +267,76 @@ main p {
 }
 
 #presupuestos a:hover {
-  background: #3b82f6;
+  background: var(--picton-blue);
   transform: translateY(-4px) scale(1.05);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
 }
 
 /* ===== Footer ===== */
 footer {
+  background: var(--rich-black);
+  color: var(--off-white);
+  padding: 3rem 2rem 1.5rem;
+  font-size: 0.9rem;
+}
+
+footer .footer-contenedor {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+footer .footer-info h3 {
+  font-size: 1.4rem;
+  color: var(--off-white);
+  margin-bottom: 1rem;
+}
+
+footer .footer-info p {
+  font-size: 0.95rem;
+  color: var(--off-white);
+  line-height: 1.6;
+}
+
+footer .footer-links h4,
+footer .footer-contact h4 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: var(--off-white);
+}
+
+footer .footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer .footer-links li {
+  margin-bottom: 0.6rem;
+}
+
+footer .footer-links a {
+  color: var(--off-white);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer .footer-links a:hover {
+  color: var(--picton-blue); /* acento al pasar el mouse */
+}
+
+footer .footer-contact p,
+footer .footer-contact img {
+  margin-bottom: 0.6rem;
+  color: var(--off-white);
+}
+
+footer .footer-bottom {
   text-align: center;
-  padding: 1rem;
-  background-color: #f1f1f1;
-  color: #555;
-  font-size: 0.75rem;
-  width: 100%;
+  padding-top: 1.5rem;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.8rem;
+  color: var(--off-white);
 }
