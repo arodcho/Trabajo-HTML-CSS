@@ -7,13 +7,15 @@
 
 /* ===== Estilos generales ===== */
 body {
-    background-color: #ffffff;
-    color: black;
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
 }
 
-/* Header */
+/* ===== Header ===== */
 header {
-  position: fixed; /* fijo arriba */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -21,12 +23,11 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0.75rem 2rem;
-  background: rgba(240, 244, 248, 0.8); /* semi-transparente */
-  backdrop-filter: blur(6px); /* efecto difuminado elegante */
+  background: rgba(240, 244, 248, 0.8);
+  backdrop-filter: blur(6px);
   z-index: 1000;
 }
 
-/* Nav */
 nav ul {
   display: flex;
   list-style: none;
@@ -43,6 +44,7 @@ nav a {
   color: #1a73e8;
   padding: 0.45rem 0.6rem;
   border-radius: 0.75rem;
+  transition: 0.3s;
 }
 
 nav a:hover,
@@ -51,42 +53,207 @@ nav a.activo {
   background-color: #1a73e8;
 }
 
-/* ===== Estilos de la portada ===== */
+/* ===== Portada ===== */
 .portada {
   position: relative;
-  height: 100vh; /* ocupa toda la pantalla */
+  height: 100vh;
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  color: white; /* texto visible sobre la imagen */
+  overflow: hidden;
+  color: #fff;
 }
 
-.portada img {
-  position: absolute;
-  top: 0;
-  left: 0;
+.portada .carousel {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* la imagen cubre toda la sección */
-  z-index: -1; /* queda detrás del texto */
+  position: absolute;
+  inset: 0;
 }
 
-.portada h2,
+.portada .slide img,
+.portada > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.portada h2 {
+  font-size: 3rem;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+  animation: fadeInDown 1.2s ease;
+}
+
 .portada p {
-  z-index: 1;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.6); /* mejor legibilidad */
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 1.2s ease;
 }
 
+/* Animaciones */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Main ===== */
+main {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  line-height: 1.7;
+  font-size: 1rem;
+  margin-top: 70px; /* para compensar header fijo */
+}
+
+main section {
+  padding: 5rem 2rem;
+}
+
+main h2 {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+main p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+/* ===== Servicios ===== */
+#servicios {
+  background: #f9fafb;
+  text-align: center;
+}
+
+#servicios h2 {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+  color: #1e3a8a;
+  position: relative;
+}
+
+#servicios h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #3b82f6;
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+#servicios ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  list-style: none;
+  margin-top: 2rem;
+}
+
+#servicios li {
+  background: #fff;
+  padding: 2rem 1.5rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  font-weight: 500;
+  transition: all 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#servicios li::before {
+  content: "✈️"; /* ícono decorativo */
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#servicios li:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+  color: #fff;
+}
+
+/* ===== Presupuestos ===== */
+#presupuestos {
+  background: #020024;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  text-align: center;
+  border-radius: 1rem 1rem 0 0;
+  padding: 5rem 2rem;
+}
+
+#presupuestos h2 {
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+  color: #ffff;
+}
+
+#presupuestos p {
+  max-width: 650px;
+  margin: 0 auto 2.5rem;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #ffff;
+}
+
+#presupuestos a {
+  display: inline-block;
+  background: #1e40af;
+  color: #ffff;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+#presupuestos a:hover {
+  background: #3b82f6;
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== Footer ===== */
 footer {
   text-align: center;
   padding: 1rem;
   background-color: #f1f1f1;
   color: #555;
-  position: relative;
-  bottom: 0;
-  width: 100%;
   font-size: 0.75rem;
+  width: 100%;
 }
