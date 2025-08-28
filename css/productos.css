@@ -1,0 +1,65 @@
+/* ---------- SECCIÓN INFO ---------- */
+#productos-info {
+    margin-top: 7.75rem;
+  text-align: center;
+  padding: 60px 20px;
+  background: #e9f2fa;
+}
+
+#productos-info h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #005fa3;
+}
+
+#productos-info p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* ---------- LISTA DE PRODUCTOS ---------- */
+#productos-lista {
+  display: grid;
+ grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+#productos-lista .producto {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#productos-lista .producto:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+#productos-lista .producto img {
+  width: 100%;
+    height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+#productos-lista .producto h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #0077cc;
+}
+
+#productos-lista .producto p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
