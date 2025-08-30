@@ -1,0 +1,143 @@
+/* ===== Paleta de Colores ===== */
+:root {
+  --off-white: #f0f4f8;
+  --picton-blue: #00a6fb;
+  --steel-blue: #0582ca;
+  --lapis-lazuli: #006494;
+  --rich-black: #051923;
+
+  --gradient-primary: linear-gradient(135deg, var(--picton-blue), var(--steel-blue));
+  --gradient-dark: linear-gradient(135deg, var(--lapis-lazuli), var(--steel-blue), var(--rich-black));
+}
+
+/* ===== Reset básico ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Estilos generales ===== */
+body {
+  line-height: 1.6rem;
+}
+
+/* ===== Header ===== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 2rem;
+  background: rgba(240, 244, 248, 0.8);
+  backdrop-filter: blur(0.375rem);
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li + li {
+  margin-left: 1.25rem;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #1a73e8;
+  padding: 0.45rem 0.6rem;
+  border-radius: 0.75rem;
+  transition: 0.3s;
+}
+
+nav a:hover,
+nav a.activo {
+  color: #fff;
+  background: #1a73e8;
+}
+
+/* ===== Main ===== */
+main {
+  color: var(--rich-black);
+  line-height: 1.7rem;
+  font-size: 1rem;
+}
+
+main section {
+  padding: 8rem 2rem;
+}
+
+main h2 {
+  font-weight: 700;
+  letter-spacing: 0.1rem; 
+}
+
+main p {
+  max-width: 44rem;
+  margin: 0 auto 1.5rem;
+  font-size: 1.1rem;
+  color: var(--rich-black);
+}
+
+/* ===== Footer ===== */
+footer {
+  background: var(--rich-black);
+  color: var(--off-white);
+  padding: 3rem 2rem 1.5rem;
+  font-size: 0.9rem;
+}
+
+footer .footer-contenedor {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13.75rem, 1fr)); /* 220px ≈ 13.75rem */
+  gap: 2rem;
+  max-width: 75rem; /* 1200px ≈ 75rem */
+  margin: 0 auto;
+}
+
+footer h3,
+footer h4 {
+  margin-bottom: 1rem;
+  color: var(--off-white);
+}
+
+footer .footer-info p,
+footer .footer-contact p,
+footer .footer-contact img {
+  margin-bottom: 0.6rem;
+  color: var(--off-white);
+}
+
+footer .footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer .footer-links li {
+  margin-bottom: 0.6rem;
+}
+
+footer .footer-links a {
+  color: var(--off-white);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+footer .footer-links a:hover {
+  color: var(--picton-blue);
+}
+
+footer .footer-bottom {
+  text-align: center;
+  padding-top: 1.5rem;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.8rem;
+  color: var(--off-white);
+}

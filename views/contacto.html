@@ -3,10 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contacto de Viacor: email, teléfono y dirección para consultas de viajes."
+    />
     <title>Contacto</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+        <link rel="stylesheet" href="../css/contacto.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
   </head>
   <body>
     <header>
+      <div class="logo">
+        <img src="../img/Logo.png" width="95px" alt="Logo Viacor" />
+      </div>
       <nav>
         <ul>
           <li><a href="../index.html">Inicio</a></li>
@@ -20,20 +31,62 @@
     <main>
       <section id="contacto-info">
         <h2>Contacto</h2>
-        <p>
-          Si tienes alguna duda o necesitas más información, no dudes en
-          contactarnos, le atenderemos lo antes posible.
-        </p>
-        <ul>
-          <li>Email: viacor@gmail.com
-          <li>Teléfono: +34 645 234 567</li>
-          <li>Dirección: P.º de la Victoria, 15, Centro, 14008 Córdoba, Spain</li>
-        </ul>
+        <div class="contenido">
+          <div class="ubicacion">
+            <img src="../img/ubicacion.png" alt="Ubicación empresa" />
+          </div>
+          <div class="texto">
+            <p>
+              Si tienes alguna duda o necesitas más información, no dudes en
+              contactarnos, le atenderemos lo antes posible.
+            </p>
+            <ul>
+              <li>
+                Email: <a href="mailto:viacor@gmail.com">viacor@gmail.com</a>
+              </li>
+              <li>Teléfono: <a href="tel:+34645234567">+34 645 234 567</a></li>
+              <li>
+                Dirección: P.º de la Victoria, 15, Centro, 14008 Córdoba, Spain
+              </li>
+            </ul>
+          </div>
+        </div>
       </section>
     </main>
 
     <footer>
-      <p>&copy; 2024 Viacor. Todos los derechos reservados.</p>
+      <div class="footer-contenedor">
+        <div class="footer-info">
+          <h3>Viacor</h3>
+          <p>
+            Explora el mundo con nosotros. Creamos experiencias únicas de viaje
+            adaptadas a ti.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Enlaces</h4>
+          <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="productos.html">Destinos</a></li>
+            <li><a href="presupuestos.html">Presupuestos</a></li>
+            <li><a href="contacto.html" class="activo">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Contacto</h4>
+          <p>Email: viacor@gmail.com</p>
+          <p>Teléfono: +34 645 234 567</p>
+          <p>
+            Dirección: P.º de la Victoria, 15, Centro, 14008 Córdoba, España
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Viacor. Todos los derechos reservados.</p>
+      </div>
     </footer>
   </body>
 </html>

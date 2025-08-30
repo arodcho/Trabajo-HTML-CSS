@@ -1,0 +1,107 @@
+/* Estilos generales de la sección */
+#form-presupuesto {
+  max-width: 600px;
+  margin: 40px auto;
+  margin-top: 10rem;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* Título */
+#form-presupuesto h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+/* Etiquetas */
+#form-presupuesto label {
+  display: block;
+  font-weight: 600;
+  margin: 15px 0 5px;
+  color: #444;
+}
+
+/* Inputs y textarea */
+#form-presupuesto input[type="text"],
+#form-presupuesto input[type="email"],
+#form-presupuesto input[type="tel"],
+#form-presupuesto textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #fafafa;
+}
+
+#form-presupuesto input:focus,
+#form-presupuesto textarea:focus {
+  border-color: #0077cc;
+  background: #fff;
+  box-shadow: 0 0 6px rgba(0, 119, 204, 0.2);
+}
+
+/* Checkbox y política */
+#form-presupuesto .checkbox {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+#form-presupuesto .checkbox input {
+  margin-right: 8px;
+}
+
+#form-presupuesto .checkbox a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+#form-presupuesto .checkbox a:hover {
+  text-decoration: underline;
+}
+
+/* Botón de envío */
+#form-presupuesto button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #0077cc, #005fa3);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#form-presupuesto button:hover {
+  background: linear-gradient(135deg, #005fa3, #004080);
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  #form-presupuesto {
+    padding: 20px;
+  }
+
+  #form-presupuesto h2 {
+    font-size: 1.5rem;
+  }
+
+  #form-presupuesto button {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}

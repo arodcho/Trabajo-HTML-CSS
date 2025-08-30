@@ -4,24 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Viacor</title>
-    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
     <header>
-      <div class="title">
-        <h1>Viacor</h1>
+      <div class="logo">
+        <img src="img/Logo.png" width="95px" alt="" />
       </div>
- <nav>
-  <ul>
-    <li><a href="index.html" class="activo">Inicio</a></li>
-    <li><a href="views/productos.html">Destinos</a></li>
-    <li><a href="views/presupuestos.html">Presupuestos</a></li>
-    <li><a href="views/contacto.html">Contacto</a></li>
-  </ul>
-</nav>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="activo">Inicio</a></li>
+          <li><a href="views/productos.html">Destinos</a></li>
+          <li><a href="views/presupuestos.html">Presupuestos</a></li>
+          <li><a href="views/contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-      <section id="portada">
+      <section id="portada" class="portada">
+        <div class="carousel">
+          <div class="slide">
+            <img src="img/portada.png" alt="Portada 1" />
+          </div>
+        </div>
         <h2>Bienvenido a Viacor</h2>
         <p>Explora el mundo con nosotros.</p>
       </section>
@@ -46,7 +52,38 @@
       </section>
     </main>
     <footer>
-      <p>&copy; 2024 Viacor. Todos los derechos reservados.</p>
+      <div class="footer-contenedor">
+        <div class="footer-info">
+          <h3>Viacor</h3>
+          <p>
+            Explora el mundo con nosotros. Creamos experiencias únicas de viaje
+            adaptadas a ti.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Enlaces</h4>
+          <ul>
+            <li><a href="index.html" class="activo">Inicio</a></li>
+            <li><a href="views/productos.html">Destinos</a></li>
+            <li><a href="views/presupuestos.html">Presupuestos</a></li>
+            <li><a href="views/contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Contacto</h4>
+          <p>Email: viacor@gmail.com</p>
+          <p>Teléfono: +34 645 234 567</p>
+          <p>
+            Dirección: P.º de la Victoria, 15, Centro, 14008 Córdoba, España
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Viacor. Todos los derechos reservados.</p>
+      </div>
     </footer>
   </body>
 </html>
