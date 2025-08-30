@@ -14,4 +14,8 @@ Proyecto en **HTML/CSS**: web ficticia de una agencia de viajes llamada **Viacor
 
 ## 🚀 Cómo usar
 1. Clona el proyecto
+```bash
+git clone https://github.com/arodcho/Trabajo-HTML-CSS.git
+```
+
 2. Abre `index.html` en tu navegador
